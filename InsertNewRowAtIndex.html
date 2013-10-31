@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/table.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            //add a new row 
+            var index = 2;
+            newRow = "<tr>" +
+                            "<td class='empid'>E333</td>" +
+                            "<td class='fname'>Fujita</td>" +
+                            "<td class='lname'>Makoto</td>" +
+                            "<td class='email'>fujita@devcurry.com</td>" + 
+                            "<td class='age'>52</td>" + 
+                        "</tr>";
+            $('#someTable > tbody > tr').eq(index-1).before(newRow); // inserts as 2nd row
+        });            
+    </script>
+</head>
+<body>
+<table id="someTable">
+    <thead>
+        <tr>
+            <th class="empid">EmpId</th>
+            <th class="fname">First Name</th>
+            <th class="lname">Last Name</th>
+            <th class="email">Email</th>
+            <th class="age">Age</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td colspan="5">
+                <a href="http://www.jquerycookbook.com">The Absolutely Awesome jQuery CookBook</a>
+            </td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td class="empid">E342</td>
+            <td class="fname">Bill</td>
+            <td class="lname">Evans</td>
+            <td class="email">Bill@devcurry.com</td>
+            <td class="age">35</td>
+        </tr>
+        <tr>
+            <td class="empid">E343</td>
+            <td class="fname">Laura</td>
+            <td class="lname">Matt</td>
+            <td class="email">laura@devcurry.com</td>
+            <td class="age">26</td>
+        </tr>
+        <tr>
+            <td class="empid">E344</td>
+            <td class="fname">Ram</td>
+            <td class="lname">Kumar</td>
+            <td class="email">ram@devcurry.com</td>
+            <td class="age">56</td>
+        </tr>
+        <tr>
+            <td class="empid">E345</td>
+            <td class="fname">Yuri</td>
+            <td class="lname">Gagrin</td>
+            <td class="email">yuri@devcurry.com</td>
+            <td class="age">39</td>
+        </tr>
+        <tr>
+            <td class="empid">E340</td>
+            <td class="fname">Asha</td>
+            <td class="lname">Singh</td>
+            <td class="email">asha@devcurry.com</td>
+            <td class="age">42</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

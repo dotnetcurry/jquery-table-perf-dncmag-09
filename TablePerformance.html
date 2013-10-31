@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="CSS/table.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.10.2.min.js"></script>
+    <script>
+$(function () {
+    var $tbl = $("#someTable");
+
+    // Approach 1: Using $.append() inside loop
+    var t1 = new Date().getTime();
+    for(i=0; i < 5000; i++){
+        rows = "<tr><td>" + i + "</td><td>FName</td><td>LName</td></tr>";
+        $tbl.append(rows);
+    }
+    var t2 = new Date().getTime();
+    var t1t2 = t2-t1;
+    $('#result').append("Approach 1: Append Inside Loop took " + t1t2 + " milliseconds" + "</br>");
+
+
+    // Approach 2: Using $.append() outside loop
+    var newrows;
+    var t3 =  new Date().getTime();
+    for(i=0; i < 5000; i++){
+        newrows += "<tr><td>" + i + "</td><td>FName</td><td>LName</td></tr>";
+    }
+    $tbl.append(newrows);
+    var t4 = new Date().getTime();
+    var t3t4 = t4 - t3;
+    $('#result').append("Approach 2: Append Once Outside Loop " + t3t4 + " milliseconds" + "</br>");
+});
+    </script>
+</head>
+<body>
+    <p id="result"></p>
+    <table id="someTable">
+        <thead>
+            <tr>
+                <th class="empid">EmpId</th>
+                <th class="fname">First Name</th>
+                <th class="lname">Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
