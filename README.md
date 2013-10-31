@@ -1,4 +1,4 @@
-HTML table manipulation recipes using jQuery
+HTML Table Manipulation Recipes using jQuery
 ===========================
 
 Some performance tips while manipulating HTML Tables in jQuery. This article  **HTML Table Manipulation using jQuery ** is in the [8th Edition of DNC Magazine](http://www.dotnetcurry.com/magazine/dnc-magazine-issue9.aspx). This magazine is absolutely free, [Subscribe Now](http://www.dotnetcurry.com/magazine).
